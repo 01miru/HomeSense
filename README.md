@@ -8,7 +8,7 @@ To build project you need this elements:
   - Breadboard
   - Cables
   - DHT22 (Humidity and temperature sensor)
-  - 4K ohm resistor
+  - 4.7k Ohm resistor
   - HM-10 (Bluetooth 4.0)
   - XCode
   - iPhone or iPad
