@@ -15,7 +15,7 @@ To build project you need this elements:
 
 ### Wiring
 
-![breadboard](http://mirudesign.pl/hs/homesense_bb.png "HomeSense")
+![breadboard](http://mirudesign.pl/hs/homesense_bb2.png "HomeSense")
 
 ### App screenshot
 
