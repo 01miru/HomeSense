@@ -1,4 +1,4 @@
-# ![breadboard](http://mirudesign.pl/hs/icon.png "icon") HomeSense
+# ![appicon](http://mirudesign.pl/hs/icon.png "icon") HomeSense
 HomeSense is Swift iOS demo application that reads data (humidity and temperature) from arduino through BLE.
 
 ## Project
@@ -13,13 +13,13 @@ This project describes how to make your own home weather station. To build proje
   - XCode 7.2
   - iPhone or iPad
 
-### Wiring
+## Wiring
 
 ![breadboard](http://mirudesign.pl/hs/homesense_bb2.png "HomeSense")
 
 ### App screenshot
 
-![breadboard](http://mirudesign.pl/hs/homesense.png "HomeSense")
+![screenshot](http://mirudesign.pl/hs/homesense.png "HomeSense")
 
 ### Version
 1.0
