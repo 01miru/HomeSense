@@ -1,4 +1,4 @@
-# HomeSense
+# ![breadboard](http://mirudesign.pl/hs/icon.png "icon") HomeSense
 HomeSense is Swift iOS demo application that reads data from arduino through BLE.
 
 ## Project
