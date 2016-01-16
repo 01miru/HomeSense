@@ -1,16 +1,16 @@
 # ![breadboard](http://mirudesign.pl/hs/icon.png "icon") HomeSense
-HomeSense is Swift iOS demo application that reads data from arduino through BLE.
+HomeSense is Swift iOS demo application that reads data (humidity and temperature) from arduino through BLE.
 
 ## Project
-To build project you need this elements:
+This project describes how to make your own home weather station. To build project you need this elements:
 
   - Arduino (ex. Leonardo)
   - Breadboard
   - Cables
   - DHT22 (Humidity and temperature sensor)
   - 4.7k Ohm resistor
-  - HM-10 (Bluetooth 4.0)
-  - XCode
+  - HM-10 or other Bluetooth 4.0 module
+  - XCode 7.2
   - iPhone or iPad
 
 ### Wiring
