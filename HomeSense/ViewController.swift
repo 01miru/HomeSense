@@ -126,6 +126,8 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         self.humidity.text = "\(humidity) %"
         self.temperature.text = "\(temperature) °C"
         
+        // Eye candy ;-)
+        
         if !self.dataShown {
             
             UIView.animateWithDuration(0.5, animations: {
@@ -154,18 +156,18 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         var msg = ""
         switch (central.state) {
         case .PoweredOff:
-            msg = "CoreBluetooth BLE hardware is powered off"
+            msg = "BLE hardware is powered off"
         case .PoweredOn:
-            msg = "CoreBluetooth BLE hardware is powered on and ready"
+            msg = "BLE hardware is ready"
             bluetoothReady = true;
         case .Resetting:
-            msg = "CoreBluetooth BLE hardware is resetting"
+            msg = "BLE hardware is resetting"
         case .Unauthorized:
-            msg = "CoreBluetooth BLE state is unauthorized"
+            msg = "BLE state is unauthorized"
         case .Unknown:
-            msg = "CoreBluetooth BLE state is unknown"
+            msg = "BLE state is unknown"
         case .Unsupported:
-            msg = "CoreBluetooth BLE hardware is unsupported on this platform"
+            msg = "BLE hardware is unsupported on this platform"
         }
 
         self.connectionStatus.text = msg
