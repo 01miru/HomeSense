@@ -30,7 +30,11 @@ class HomeSense {
     class func getHumidity (value: NSData) -> String {
         
         if let val = NSString(data: value, encoding: NSUTF8StringEncoding){
-            return self.matchesForRegexInText(val)[1]
+            let hum = self.matchesForRegexInText(val)[1]
+            let humpArr = hum.characters.split{$0 == "."}.map(String.init)
+            
+            // If you want to show two decimal places values, return hum instead humpArr[0]
+            return humpArr[0]
         }
         return "-"
         
@@ -39,7 +43,11 @@ class HomeSense {
     class func getTemperature (value: NSData) -> String {
         
         if let val = NSString(data: value, encoding: NSUTF8StringEncoding){
-            return self.matchesForRegexInText(val)[0]
+            let temp = self.matchesForRegexInText(val)[0]
+            let tempArr = temp.characters.split{$0 == "."}.map(String.init)
+            
+            // If you want to show two decimal places values, return temp instead tempArr[0]
+            return tempArr[0]
         }
         return "-"
         

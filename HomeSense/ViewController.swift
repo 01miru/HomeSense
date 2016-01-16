@@ -32,7 +32,12 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = view.bounds
         gradient.colors = [UIColor(red: 253 / 255, green: 197 / 255, blue: 108/255, alpha: 1.0).CGColor, UIColor(red: 241/255, green: 106/255, blue: 150/255, alpha: 1.0).CGColor]
+        // Change gradient angle
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 1, y: 1)
+        
         self.view.layer.insertSublayer(gradient, atIndex: 0)
+        
         startUpCentralManager()
         
     }
@@ -130,21 +135,30 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         
         if !self.dataShown {
             
-            UIView.animateWithDuration(0.5, animations: {
-                self.humidityLabel.alpha = 1.0
-            })
+            self.temperature.layer.position.y += 80
+            self.humidity.layer.position.y -= 80
             
-            UIView.animateWithDuration(0.5, delay: 0.1, options: [], animations: {
-                self.humidity.alpha = 1.0
-            }, completion: nil)
+            UIView.animateWithDuration(0.5, animations: {
+                self.temperatureLabel.alpha = 1.0
+            }) 
             
             UIView.animateWithDuration(0.5, delay: 0.2, options: [], animations: {
-                self.temperatureLabel.alpha = 1.0
-            }, completion: nil)
-            
-            UIView.animateWithDuration(0.5, delay: 0.3, options: [], animations: {
-                self.temperature.alpha = 1.0
+                self.humidityLabel.alpha = 1.0
                 }, completion: nil)
+           
+            UIView.animateWithDuration(0.5, delay: 0.4, options: [], animations: {
+                self.temperature.alpha = 1.0
+                self.temperature.layer.position.y -= 80
+                }, completion: nil)
+            
+            UIView.animateWithDuration(0.5, delay: 0.4, options: [], animations: {
+                self.humidity.alpha = 1.0
+                self.humidity.layer.position.y += 80
+                }, completion: nil)
+            
+            UIView.animateWithDuration(0.5, delay: 0.1, options: [], animations: {
+                self.connectionStatus.alpha = 0.0
+            }, completion: nil)
             
             self.dataShown = true
         }

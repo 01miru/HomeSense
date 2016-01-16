@@ -19,7 +19,7 @@ This project describes how to make your own home weather station. To build proje
 
 ### App screenshot
 
-![screenshot](http://mirudesign.pl/hs/homesense.png "HomeSense")
+![screenshot](http://mirudesign.pl/hs/homesense2.png "HomeSense")
 
 ### Version
 1.0
