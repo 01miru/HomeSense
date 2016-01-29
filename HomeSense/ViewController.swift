@@ -28,6 +28,10 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate! as! AppDelegate
+        appDelegate.mainController = self
+        
         let view: UIView = UIView(frame: CGRectMake(0.0, 0.0, self.view.bounds.width, self.view.bounds.height))
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.frame = view.bounds
@@ -163,6 +167,13 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             self.dataShown = true
         }
         
+    }
+    
+    func dissconnectDevice() {
+        centralManager.stopScan()
+        if((sensorPeripheral) != nil){
+            centralManager.cancelPeripheralConnection(sensorPeripheral)
+        }
     }
     
     func centralManagerDidUpdateState(central: CBCentralManager) {
